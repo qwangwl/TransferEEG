@@ -1,4 +1,5 @@
 # prpl.yaml
+# this is the best prpl config
 
 # Random seed
 seed: 20
@@ -12,7 +13,7 @@ num_of_class: 3
 # Training parameters
 batch_size: 96
 n_epochs: 1000
-early_stop: 100
+early_stop: 0
 log_interval: 1
 
 # Optimizer parameters
@@ -27,14 +28,16 @@ lr_scheduler: false
 # Transfer learning related parameters
 transfer_loss_weight: 1.0
 
-tmp_saved_path: "E:\\EEG\\logs\\0924\\SC\\"
+tmp_saved_path: "E:\\EEG\\logs\\0829\\multisource\\"
 
-# # base parameters
-# model_type: base
-# transfer_loss_type: dann
-
+# PRPL parameters
+model_type: prpl
+cluster_weight: 2
+lower_rank: 32
+upper_threshold: 0.9
+lower_threshold: 0.5
 
 # Other parameters
 num_workers: 0
-saved_model: false
+saved_model: true
 

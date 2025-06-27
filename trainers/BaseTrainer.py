@@ -120,8 +120,8 @@ class BaseTrainer(object):
                 self.lr_scheduler.step()
 
             # 更新各种记录
-            loss_clf.update(cls_loss.item())
-            loss_transfer.update(transfer_loss.item())
+            loss_clf.update(cls_loss.detach().item())
+            loss_transfer.update(transfer_loss.detach().item())
             
         return loss_clf.avg, loss_transfer.avg
     
